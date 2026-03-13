@@ -18,7 +18,7 @@ jobs:
       - name: Install minitest
         run: gem install minitest
       - name: Test
-        run: ruby tests/app_test.rb
+        run: bundle exec ruby tests/app_test.rb
 
   docker:
     runs-on: ubuntu-latest
