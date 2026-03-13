@@ -15,8 +15,10 @@ jobs:
         with:
           ruby-version: '3.3'
           bundler-cache: true
+      - name: Install minitest
+        run: gem install minitest
       - name: Test
-        run: bundle exec ruby -Ilib -e "Dir['tests/**/*_test.rb'].each { |f| require File.expand_path(f) }"
+        run: ruby tests/app_test.rb
 
   docker:
     runs-on: ubuntu-latest
