@@ -1,0 +1,15 @@
+vendor/
+.bundle/
+*.gem
+.DS_Store
+.env
+.env.*
+.env.local
+*.pem
+*.key
+*.pfx
+*.p12
+*.pdf
+*_Error_Log.md
+node_modules/
+Gemfile.lock
