@@ -14,9 +14,8 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
-          bundler-cache: true
-      - name: Install test dependencies
-        run: gem install minitest rack-test
+      - name: Install dependencies
+        run: gem install sinatra rackup webrick rack-test minitest
       - name: Test
         run: ruby tests/app_test.rb
 
