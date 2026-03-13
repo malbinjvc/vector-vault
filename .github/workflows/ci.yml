@@ -15,10 +15,10 @@ jobs:
         with:
           ruby-version: '3.3'
           bundler-cache: true
-      - name: Install minitest
-        run: gem install minitest
+      - name: Install test dependencies
+        run: gem install minitest rack-test
       - name: Test
-        run: bundle exec ruby tests/app_test.rb
+        run: ruby tests/app_test.rb
 
   docker:
     runs-on: ubuntu-latest
